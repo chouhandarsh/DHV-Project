@@ -1,17 +1,17 @@
 [project]
 name = "chat-bot"
 version = "0.1.0"
-description = "Add your description here"
+description = "Chatbot backend"
 readme = "README.md"
-authors = [
-    { name = "chouhandarsh", email = "darshc534@gmail.com" }
-]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "paddlepaddle==3.2.1"
+]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/nirf_chatbot"]
-[project.scripts]
-chat-bot = "chat_bot:main"
 
 [build-system]
 requires = ["uv_build>=0.12.21,<0.13.0"]
