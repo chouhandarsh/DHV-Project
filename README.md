@@ -53,6 +53,8 @@ Open the Vite URL printed in the terminal. The frontend uses `/api/rankings` to 
 
 GitHub Pages can host only the frontend. Deploy the Express backend separately, set the GitHub repository variable `VITE_API_BASE_URL` to the deployed API base URL ending in `/api`, and set backend `CORS_ORIGIN` to the exact deployed frontend origin (for example, `https://your-user.github.io`). Keep `VITE_API_BASE_URL` blank for local development so the Vite proxy is used.
 
+If you deploy the backend on Render, use the included `render.yaml` configuration. It targets the `backend/` service explicitly so Render does not try to auto-detect and install the unrelated Python chatbot under `chat-Bot/`.
+
 ## API endpoints
 
 - `GET /api/health` — backend and dataset status.
